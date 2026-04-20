@@ -1,226 +1,123 @@
-<html>
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <title>Field Photos | Earth History @ UVic</title>
+          <meta
+            name="description"
+            content="Full field-photo archive for Earth History @ UVic, spanning coastal geomorphology, carbonate platforms, and stratigraphic field sites."
+          >
+          <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
+          <link rel="icon" href="favicon.ico">
+          <link rel="icon" type="image/png" sizes="96x96" href="android-chrome-96x96.png">
+          <meta name="theme-color" content="#f6f3ed">
+          <link rel="stylesheet" href="theme.css">
+          <script defer src="content.js"></script>
+          <script defer src="gallery-data.js"></script>
+          <script defer src="theme.js"></script>
+        </head>
+        <body data-page="fieldwork">
+          <header class="site-header">
+  <div class="nav-shell">
+    <a class="site-mark" href="index.html">Earth History @ UVic</a>
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-menu"
+      data-nav-toggle
+    >
+      Menu
+    </button>
+    <nav class="site-nav" id="site-menu" data-nav-menu>
+      <a href="index.html#research">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="fieldwork.html" aria-current="page">Field Photos</a>
+      <a href="team.html">Team</a>
+      <a href="https://eos-courses.readthedocs.io/en/latest/">Teaching</a>
+    </nav>
+  </div>
+</header>
 
-<head>
-	<title>Blake Dyer : Research Page</title>
-	<link href="stylesheet2.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="site.css" media="all" rel="stylesheet" type="text/css" />
-	<meta name="description" content="Geology" />
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<script src="scroll_track.js" type="text/javascript"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+          <main class="page-shell">
 
-	<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-	<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/manifest.json">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="theme-color" content="#ffffff">
-	<script>
-		(function(i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r;
-			i[r] = i[r] || function() {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date();
-			a = s.createElement(o),
-				m = s.getElementsByTagName(o)[0];
-			a.async = 1;
-			a.src = g;
-			m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            <section class="hero hero--fieldwork hero--short">
+            <div class="hero__content">
+              <p class="hero__eyebrow">Field Photos</p>
+              <h1 class="hero__title">Coastlines, carbonates, stratigraphy, and corals.</h1>
 
-		ga('create', 'UA-59857607-1', 'auto');
-		ga('send', 'pageview');
-	</script>
+              <p class="hero__lede">
+                These albums document the field observations and landscapes behind the group's 
+                research, spanning relatively 
+                <span class="term" tabindex="0" aria-describedby="note-interglacial">
+                  recent interglacial
+                  <span class="term__note" role="tooltip" id="note-interglacial">
+                    400 to 100 thousand years ago
+                  </span>
+                </span>
+                shorelines to
+                <span class="term" tabindex="0" aria-describedby="note-paleozoic">
+                  Paleozoic
+                  <span class="term__note" role="tooltip" id="note-paleozoic">
+                    530 to 251 million years ago
+                  </span>
+                </span>
+                and
+                <span class="term" tabindex="0" aria-describedby="note-neoproterozoic">
+                  Neoproterozoic
+                  <span class="term__note" role="tooltip" id="note-neoproterozoic">
+                    1 billion to 541 million years ago
+                  </span>
+                </span>
+                basins.
+              </p>
+            </div>
+          </section>
 
-	<script>
-		function myFunction() {
-			document.getElementById("myDropdown").classList.toggle("show");
-		}
+            <!-- <section class="section section--tight">
+              <div class="gallery-intro-card gallery-intro-card--hub">
+                <div class="gallery-intro-card__copy">
+                  <p class="section-kicker">Field Archive</p>
+                  <h2>Full galleries from every field area.</h2>
+                  <p>
+                    Each album preserves the complete photo set and associated captions, making it
+                    easy to move from landscape context to outcrop-scale detail.
+                  </p>
+                </div>
+                <div class="gallery-intro-card__stats">
+                  <p class="gallery-intro-card__count" data-album-count>0</p>
+                  <p class="gallery-intro-card__label">albums in the field archive</p>
+                </div>
+              </div>
+            </section> -->
 
-		// Close the dropdown menu if the user clicks outside of it
-		window.onclick = function(event) {
-			if (!event.target.matches('.dropbtn')) {
-				var dropdowns = document.getElementsByClassName("dropdown-content");
-				var i;
-				for (i = 0; i < dropdowns.length; i++) {
-					var openDropdown = dropdowns[i];
-					if (openDropdown.classList.contains('show')) {
-						openDropdown.classList.remove('show');
-					}
-				}
-			}
-		}
-	</script>
-	<script>
-		$(function() {
-			$("#nav-placeholder").load("nav.html");
-		});
-	</script>
-	<script>
-		$(function() {
-			$("#foot-placeholder").load("footer.html");
-		});
-	</script>
-</head>
+            <section class="section">
+              <div class="section-heading">
+                <p class="section-kicker">Albums</p>
+                <h2>Browse field sites.</h2>
+                <p>
+                  This captioned field photograph archive highlights and connects our active projects and
+          published work to the places and geologic features we study.
+                </p>
+              </div>
+              <div class="album-grid" id="album-grid"></div>
+            </section>
+          </main>
 
-
-
-
-<body class="home">
-
-	<div class="img-container-f">
-
-		<div id="nav-placeholder">
-		</div>
-
-		<div class="description">
-			<i>&nbsp&nbsp&nbsp&nbsp<br></i>
-			<b style="letter-spacing:.2em">FIELD WORK</b><br>
-
-		</div>
-
-	</div>
-
-	<div style='display:grid;
-	grid-template-columns: 1fr 5fr;'>
-
-		<div class='left-nav'>
-			<span style='font-weight:bold;color:#CCCCCC;letter-spacing: 0em'>FIELD WORK</span>
-			<ul style='list-style-type: none;padding: 0;margin-left: 2%'>
-				<li><a href='#tci'>TURKS AND CAICOS</a></li>
-				<li><a href='#crock'>CANADIAN ROCKIES</a></li>
-				<li><a href='#baha'>THE BAHAMAS</a></li>
-				<li><a href='#wus'>WESTERN US</a></li>
-				<li><a href='#barb'>BARBADOS</a></li>
-				<li><a href='#sa'>SOUTH AUSTRALIA</a></li>
-			</ul>
-			<span style='font-weight:bold;color:#CCCCCC;letter-spacing: 0em'>OTHER</span>
-			<ul style='list-style-type: none;padding: 0;margin-left: 2%'>
-				<li><a href='#indonesia'>INDONESIA</a></li>
-			</ul>
-
-
-
-
-		</div>
-
-
-		<div class="info">
-			<section id='tci'>
-				<header style='padding-left:.25em'><a href='turks_and_caicos_2022.html'>TURKS AND CAICOS</a> <i>(3 weeks)</i></header>
-			</section>
-
-			<div class="photostrip">
-				<img id="strip" src="Gallery/turks_and_caicos_2022/med/202206090941.jpg">
-				<img id="strip" src="Gallery/turks_and_caicos_2022/med/202206111420.jpg">
-				<img id="strip" src="Gallery/turks_and_caicos_2022/med/202206131347.jpg">
-				<img id="strip" src="Gallery/turks_and_caicos_2022/med/202206250815.jpg">
-
-			</div>
-
-			<section id='crock'>
-				<header style='padding-left:.25em'><a href='canadian_rockies_2021.html'>CANADIAN ROCKIES</a> <i>(1 month)</i></header>
-			</section>
-
-			<div class="photostrip">
-				<img id="strip" src="Gallery/med_canadian_rockies_2021/2021-08-12_13_01_03.jpg">
-				<img id="strip" src="Gallery/med_canadian_rockies_2021/2021-08-15_15_50_54.jpg">
-				<img id="strip" src="Gallery/med_canadian_rockies_2021/2021-08-26_15_49_07.jpg">
-				<img id="strip" src="Gallery/med_canadian_rockies_2021/2021-08-11_21_24_46.jpg">
-
-			</div>
-
-
-			<section id='baha'>
-				<div class="dropdown">
-					<button onclick="myFunction()" class="dropbtn">THE BAHAMAS</button>
-					<div id="myDropdown" class="dropdown-content">
-						<a href="bahamas.html">2019</a>
-					</div>
-				</div>
-				<i style='font-weight:300;
-font-size:1em;
-letter-spacing:0em;font-size:1.5em;'>(5 months)</i>
-			</section>
-			<br>
-			<!-- Since 2015, I have been working in the Bahamas to constrain the effect of glacial isostatic adjustment and global mean sea level on the stratigraphic record of the last interglacial. -->
-
-			<div class="photostrip">
-				<img id="strip" src="http://www.blakedyer.com/b1.jpg">
-				<img id="strip" src="http://www.blakedyer.com/b2.jpg">
-				<img id="strip" src="http://www.blakedyer.com/b3.jpg">
-				<img id="strip" src="http://www.blakedyer.com/b4.jpg">
-			</div>
-			</section>
-
-			<section id='wus'>
-				<header style='padding-left:.25em'><a href='wusa.html'>WESTERN UNITED STATES</a> <i>(9 months)</i></header>
-			</section>
-
-			<!-- <header style='padding-left:.25em'>WESTERN UNITED STATES <i>(9 months)</i></header> -->
-
-			<!-- In 2011, I started working on late Paleozoic carbonates in the Western United States. This field data has helped us construct numerical models to improve our understand of the stratigraphic expression of meteoric diagenesis in carbonate
-		platforms. Moreover, the mapping the extent and magnitude of diagenesis in these western US carbonates seems to be critical for interpreting global carbon isotopic data and cataloging the ice sheet dynamics during the Late Paleozoic Ice Age. -->
-
-			<div class="photostrip">
-				<img id="strip" src="http://www.blakedyer.com/wus1.jpg">
-				<img id="strip" src="http://www.blakedyer.com/wus2.jpg">
-				<img id="strip" src="http://www.blakedyer.com/wus3.jpg">
-				<img id="strip" src="http://www.blakedyer.com/wus4.jpg">
-			</div>
-
-
-			<section id='barb'>
-				<header style='padding-left:.25em'><a href='barbados.html'>BARBADOS</a> <i>(2 weeks)</i></header>
-				<!-- In 2018, <a href='https://blogs.ei.columbia.edu/2018/05/14/ancient-sea-levels-barbados/'>a group of us traveled to Barbados </a>to examine ancient coral terraces and tidal notches. We surveyed these classic sites at high resolution, and hope to
-		use that data, in combination with new geophysical models, to improve estimates of past sea level. -->
-			</section>
-			<div class="photostrip">
-				<img id="strip" src="http://www.blakedyer.com/bar1.jpg">
-				<img id="strip" src="http://www.blakedyer.com/bar2.jpg">
-				<img id="strip" src="http://www.blakedyer.com/bar3.jpg">
-				<img id="strip" src="http://www.blakedyer.com/bar4.jpg">
-			</div>
-
-
-
-			<section id='sa'>
-				<header style='padding-left:.25em'><a href='south_australia.html'>SOUTH AUSTRALIA</a> <i>(3 months)</i></header>
-			</section>
-			<!-- In the summer of 2010, I joined
-		<a href="http://www.jonhusson.com/">Jon Husson</a>
-		and
-		<a href="https://earthsci.st-andrews.ac.uk/person/cvr/">Catherine Rose</a>
-		in the Flinders Ranges of South Australia to assist them in their work studying the the Marinoan glaciation and the Wonoka anomaly. -->
-
-			<div class="photostrip">
-				<img id="strip" src="http://www.blakedyer.com/sa1.jpg">
-				<img id="strip" src="http://www.blakedyer.com/sa2.jpg">
-				<img id="strip" src="http://www.blakedyer.com/sa3.jpg">
-				<img id="strip" src="http://www.blakedyer.com/sa4.jpg">
-			</div>
-
-
-			<section id='indonesia'>
-				<header style='padding-left:.25em'><a href='Indonesia.html'>INDONESIA</a> <i>(1 month)</i></header>
-			</section>
-
-			<div class="photostrip">
-				<img id="strip" src="Gallery/Indonesia/med/2012_08_10_23_26_26.jpg">
-				<img id="strip" src="Gallery/Indonesia/med/2012_08_13_05_06_17.jpg">
-				<img id="strip" src="Gallery/Indonesia/med/2012_08_13_03_59_17.jpg">
-				<img id="strip" src="Gallery/Indonesia/med/2012_08_17_18_00_25.jpg">
-
-			</div>
-
-
-		</div>
-		</section>
-	</div>
-
-	<div id="foot-placeholder">
-	</div>
-</body>
-
-</html>
+          <footer class="site-footer">
+  <div class="footer-shell">
+    <div>
+      <p class="footer-brand">Earth History @ UVic</p>
+      <p class="footer-copy">Field observations and the landscapes behind the research.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="team.html">Team</a>
+      <a href="mailto:blakedyer@uvic.ca">Email</a>
+    </div>
+  </div>
+</footer>
+        </body>
+        </html>
