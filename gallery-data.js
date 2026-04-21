@@ -184,9 +184,9 @@ window.EARTH_HISTORY_GALLERIES = {
           "thumb": "albums/hawaii/thumb/13591304.jpg",
           "width": 4000,
           "height": 3000,
-          "caption": "Last interglacial cural burrowed by a vermetid (worm snail)",
+          "caption": "Last interglacial coral burrowed by a vermetid (worm snail)",
           "author": "Stacey Edmonsond",
-          "alt": "Last interglacial cural burrowed by a vermetid (worm snail)",
+          "alt": "Last interglacial coral burrowed by a vermetid (worm snail)",
           "file": "13591304.jpg",
           "captured_at": "2023-06-04T13:59:13"
         },
