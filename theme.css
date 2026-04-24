@@ -114,6 +114,14 @@ select {
   font-weight: 700;
 }
 
+.site-nav__label {
+  color: rgba(93, 105, 114, 0.8);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .nav-divider {
   color: rgba(29, 37, 33, 0.28);
 }
