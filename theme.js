@@ -40,39 +40,6 @@
     });
   }
 
-  function renderEcosystemStrip() {
-    const header = document.querySelector(".site-header");
-    if (!header || document.querySelector(".ecosystem-strip")) {
-      return;
-    }
-
-    const wrapper = document.createElement("div");
-    wrapper.className = "ecosystem-strip";
-    wrapper.innerHTML = `
-      <div class="ecosystem-shell">
-        <p class="ecosystem-strip__eyebrow">SEOS Web Ecosystem</p>
-        <a class="ecosystem-link is-active" href="index.html">
-          <span class="ecosystem-link__label">Research</span>
-          <span class="ecosystem-link__summary">Group publications, field albums, and people.</span>
-        </a>
-        <a class="ecosystem-link" href="https://blakedyer.github.io/eos-courses/">
-          <span class="ecosystem-link__label">Teaching</span>
-          <span class="ecosystem-link__summary">Course pages, lecture materials, and assignments.</span>
-        </a>
-        <a class="ecosystem-link" href="https://blakedyer.github.io/curriculum_atlas/">
-          <span class="ecosystem-link__label">Curriculum Atlas</span>
-          <span class="ecosystem-link__summary">Approved program and prerequisite structure.</span>
-        </a>
-        <a class="ecosystem-link" href="https://blakedyer.github.io/seos_curriculum/">
-          <span class="ecosystem-link__label">Curriculum Work</span>
-          <span class="ecosystem-link__summary">Draft proposals, status tracking, and handoff notes.</span>
-        </a>
-      </div>
-    `;
-
-    header.insertAdjacentElement("afterend", wrapper);
-  }
-
   function publicationMarkup(publication, compact = false) {
     const tags = publication.tags
       .map((tag) => `<li class="tag">${escapeHtml(titleCase(tag))}</li>`)
@@ -387,7 +354,6 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     setupNav();
-    renderEcosystemStrip();
     renderCounts();
     renderHome();
     renderPublications();
