@@ -575,7 +575,6 @@ select {
 }
 
 .fieldwork-hero-panel__media video,
-.fieldwork-hero-panel__poster,
 .fieldwork-card__media video,
 .fieldwork-card__media img {
   display: block;
@@ -584,7 +583,6 @@ select {
   object-fit: cover;
 }
 
-.fieldwork-hero-panel__poster,
 .fieldwork-card__media img {
   display: none;
 }
@@ -1053,14 +1051,6 @@ select {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-
-  .fieldwork-hero-panel__media video {
-    display: none;
-  }
-
-  .fieldwork-hero-panel__poster {
-    display: block;
   }
 }
 

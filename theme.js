@@ -155,87 +155,6 @@
     });
   }
 
-  function setupMotionVideos() {
-    const heroVideos = Array.from(document.querySelectorAll('[data-motion-video="hero"]'));
-    if (!heroVideos.length || !window.matchMedia) {
-      return;
-    }
-
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    const playHeroVideo = (video) => {
-      video.muted = true;
-      video.defaultMuted = true;
-      video.volume = 0;
-      video.autoplay = true;
-      video.loop = true;
-      video.playsInline = true;
-      video.setAttribute("muted", "");
-      video.setAttribute("playsinline", "");
-
-      if (video.readyState === 0) {
-        video.load();
-      }
-
-      const playAttempt = video.play();
-      if (playAttempt && typeof playAttempt.catch === "function") {
-        playAttempt.catch(() => {});
-      }
-    };
-
-    const triggerPlayback = () => {
-      if (!reducedMotion.matches) {
-        heroVideos.forEach((video) => {
-          playHeroVideo(video);
-        });
-      }
-    };
-
-    const sync = () => {
-      if (reducedMotion.matches) {
-        heroVideos.forEach((video) => {
-          video.pause();
-          video.currentTime = 0;
-        });
-        return;
-      }
-
-      triggerPlayback();
-    };
-
-    heroVideos.forEach((video) => {
-      video.addEventListener("loadedmetadata", () => {
-        if (!reducedMotion.matches) {
-          playHeroVideo(video);
-        }
-      });
-
-      video.addEventListener("canplay", () => {
-        if (!reducedMotion.matches) {
-          playHeroVideo(video);
-        }
-      });
-    });
-
-    sync();
-    window.addEventListener("load", triggerPlayback);
-    document.addEventListener("visibilitychange", () => {
-      if (!document.hidden) {
-        triggerPlayback();
-      }
-    });
-
-    ["pointerdown", "keydown", "touchstart"].forEach((eventName) => {
-      document.addEventListener(eventName, triggerPlayback, { once: true, passive: true });
-    });
-
-    if (typeof reducedMotion.addEventListener === "function") {
-      reducedMotion.addEventListener("change", sync);
-    } else if (typeof reducedMotion.addListener === "function") {
-      reducedMotion.addListener(sync);
-    }
-  }
-
   function createIntroMarkup(gallery) {
     const paragraphs = [gallery.summary].concat(gallery.intro || []);
     const paragraphMarkup = paragraphs
@@ -435,7 +354,6 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     setupNav();
-    setupMotionVideos();
     renderCounts();
     renderHome();
     renderPublications();
