@@ -166,6 +166,7 @@
     const playHeroVideo = (video) => {
       video.muted = true;
       video.defaultMuted = true;
+      video.volume = 0;
       video.autoplay = true;
       video.loop = true;
       video.playsInline = true;
@@ -182,6 +183,14 @@
       }
     };
 
+    const triggerPlayback = () => {
+      if (!reducedMotion.matches) {
+        heroVideos.forEach((video) => {
+          playHeroVideo(video);
+        });
+      }
+    };
+
     const sync = () => {
       if (reducedMotion.matches) {
         heroVideos.forEach((video) => {
@@ -191,9 +200,7 @@
         return;
       }
 
-      heroVideos.forEach((video) => {
-        playHeroVideo(video);
-      });
+      triggerPlayback();
     };
 
     heroVideos.forEach((video) => {
@@ -211,6 +218,16 @@
     });
 
     sync();
+    window.addEventListener("load", triggerPlayback);
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) {
+        triggerPlayback();
+      }
+    });
+
+    ["pointerdown", "keydown", "touchstart"].forEach((eventName) => {
+      document.addEventListener(eventName, triggerPlayback, { once: true, passive: true });
+    });
 
     if (typeof reducedMotion.addEventListener === "function") {
       reducedMotion.addEventListener("change", sync);

@@ -46,8 +46,8 @@ build_poster() {
     "$output"
 }
 
-build_mp4 "$SRC_DIR/web5.mp4" "$VIDEO_DIR/fieldwork-hero-loop.mp4" 10 12 1280 26 24
-build_poster "$VIDEO_DIR/fieldwork-hero-loop.mp4" "$POSTER_DIR/fieldwork-hero-loop.jpg" 2 1280
+build_mp4 "$SRC_DIR/web5.mp4" "$VIDEO_DIR/fieldwork-hero-loop.mp4" 8 22 1280 26 24
+build_poster "$VIDEO_DIR/fieldwork-hero-loop.mp4" "$POSTER_DIR/fieldwork-hero-loop.jpg" 4 1280
 
 build_mp4 "$SRC_DIR/seagrass.mp4" "$VIDEO_DIR/fieldwork-seagrass.mp4" 0 12 960 28 24
 build_poster "$VIDEO_DIR/fieldwork-seagrass.mp4" "$POSTER_DIR/fieldwork-seagrass.jpg" 2 960
