@@ -46,30 +46,8 @@ build_poster() {
     "$output"
 }
 
-build_webp_loop() {
-  local input="$1"
-  local output="$2"
-  local start="$3"
-  local duration="$4"
-  local width="$5"
-  local fps="$6"
-
-  ffmpeg -y \
-    -ss "$start" \
-    -t "$duration" \
-    -i "$input" \
-    -an \
-    -vf "fps=${fps},scale=${width}:-2:flags=lanczos" \
-    -c:v libwebp \
-    -compression_level 6 \
-    -q:v 58 \
-    -loop 0 \
-    "$output"
-}
-
-build_mp4 "$SRC_DIR/web5.mp4" "$VIDEO_DIR/fieldwork-hero-loop.mp4" 0 24 1280 26 24
-build_poster "$VIDEO_DIR/fieldwork-hero-loop.mp4" "$POSTER_DIR/fieldwork-hero-loop.jpg" 6 1280
-build_webp_loop "$SRC_DIR/web5.mp4" "$VIDEO_DIR/fieldwork-hero-loop.webp" 0 24 960 12
+build_mp4 "$SRC_DIR/web5.mp4" "$VIDEO_DIR/fieldwork-hero-loop.mp4" 0 14 960 29 24
+build_poster "$VIDEO_DIR/fieldwork-hero-loop.mp4" "$POSTER_DIR/fieldwork-hero-loop.jpg" 4 960
 
 build_mp4 "$SRC_DIR/seagrass.mp4" "$VIDEO_DIR/fieldwork-seagrass.mp4" 0 12 960 28 24
 build_poster "$VIDEO_DIR/fieldwork-seagrass.mp4" "$POSTER_DIR/fieldwork-seagrass.jpg" 2 960
