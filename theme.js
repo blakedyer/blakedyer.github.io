@@ -162,6 +162,21 @@
     }
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const heroState = new WeakMap();
+
+    const showAnimatedFallback = (video) => {
+      const media = video.closest(".fieldwork-hero-panel__media");
+      if (media) {
+        media.classList.add("has-video-fallback");
+      }
+    };
+
+    const hideAnimatedFallback = (video) => {
+      const media = video.closest(".fieldwork-hero-panel__media");
+      if (media) {
+        media.classList.remove("has-video-fallback");
+      }
+    };
 
     const playHeroVideo = (video) => {
       video.muted = true;
@@ -179,7 +194,9 @@
 
       const playAttempt = video.play();
       if (playAttempt && typeof playAttempt.catch === "function") {
-        playAttempt.catch(() => {});
+        playAttempt.catch(() => {
+          showAnimatedFallback(video);
+        });
       }
     };
 
@@ -196,6 +213,7 @@
         heroVideos.forEach((video) => {
           video.pause();
           video.currentTime = 0;
+          hideAnimatedFallback(video);
         });
         return;
       }
@@ -204,16 +222,53 @@
     };
 
     heroVideos.forEach((video) => {
+      heroState.set(video, { lastTime: -1, stallTimer: null });
+
+      const schedulePlaybackCheck = () => {
+        const state = heroState.get(video);
+        if (!state) {
+          return;
+        }
+
+        if (state.stallTimer) {
+          window.clearTimeout(state.stallTimer);
+        }
+
+        state.lastTime = video.currentTime;
+        state.stallTimer = window.setTimeout(() => {
+          if (reducedMotion.matches) {
+            return;
+          }
+
+          if (video.paused || video.currentTime <= state.lastTime + 0.05) {
+            showAnimatedFallback(video);
+          } else {
+            hideAnimatedFallback(video);
+          }
+        }, 1800);
+      };
+
       video.addEventListener("loadedmetadata", () => {
         if (!reducedMotion.matches) {
           playHeroVideo(video);
+          schedulePlaybackCheck();
         }
       });
 
       video.addEventListener("canplay", () => {
         if (!reducedMotion.matches) {
           playHeroVideo(video);
+          schedulePlaybackCheck();
         }
+      });
+
+      video.addEventListener("playing", () => {
+        hideAnimatedFallback(video);
+        schedulePlaybackCheck();
+      });
+
+      video.addEventListener("error", () => {
+        showAnimatedFallback(video);
       });
     });
 

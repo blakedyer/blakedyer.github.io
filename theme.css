@@ -575,7 +575,8 @@ select {
 }
 
 .fieldwork-hero-panel__media video,
-.fieldwork-hero-panel__media img,
+.fieldwork-hero-panel__animated-fallback,
+.fieldwork-hero-panel__poster,
 .fieldwork-card__media video,
 .fieldwork-card__media img {
   display: block;
@@ -584,9 +585,18 @@ select {
   object-fit: cover;
 }
 
-.fieldwork-hero-panel__media img,
+.fieldwork-hero-panel__animated-fallback,
+.fieldwork-hero-panel__poster,
 .fieldwork-card__media img {
   display: none;
+}
+
+.fieldwork-hero-panel__media.has-video-fallback video {
+  display: none;
+}
+
+.fieldwork-hero-panel__media.has-video-fallback .fieldwork-hero-panel__animated-fallback {
+  display: block;
 }
 
 .fieldwork-grid {
@@ -1059,7 +1069,11 @@ select {
     display: none;
   }
 
-  .fieldwork-hero-panel__media img {
+  .fieldwork-hero-panel__animated-fallback {
+    display: none;
+  }
+
+  .fieldwork-hero-panel__poster {
     display: block;
   }
 }
