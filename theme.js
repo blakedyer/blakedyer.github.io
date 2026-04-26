@@ -156,8 +156,8 @@
   }
 
   function setupMotionVideos() {
-    const videos = Array.from(document.querySelectorAll("[data-motion-video]"));
-    if (!videos.length || !window.matchMedia) {
+    const heroVideos = Array.from(document.querySelectorAll('[data-motion-video="hero"]'));
+    if (!heroVideos.length || !window.matchMedia) {
       return;
     }
 
@@ -165,19 +165,17 @@
 
     const sync = () => {
       if (reducedMotion.matches) {
-        videos.forEach((video) => {
+        heroVideos.forEach((video) => {
           video.pause();
           video.currentTime = 0;
         });
         return;
       }
 
-      videos.forEach((video) => {
-        if (video.dataset.motionVideo === "hero") {
-          const playAttempt = video.play();
-          if (playAttempt && typeof playAttempt.catch === "function") {
-            playAttempt.catch(() => {});
-          }
+      heroVideos.forEach((video) => {
+        const playAttempt = video.play();
+        if (playAttempt && typeof playAttempt.catch === "function") {
+          playAttempt.catch(() => {});
         }
       });
     };

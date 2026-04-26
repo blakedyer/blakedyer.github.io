@@ -522,6 +522,11 @@ select {
   backdrop-filter: blur(12px);
 }
 
+.fieldwork-hero-panel--home {
+  grid-template-columns: minmax(0, 0.8fr) minmax(24rem, 1.2fr);
+  align-items: stretch;
+}
+
 .fieldwork-hero-panel__copy {
   padding: 1.5rem;
 }
@@ -1050,13 +1055,11 @@ select {
     scroll-behavior: auto;
   }
 
-  .fieldwork-hero-panel__media video,
-  .fieldwork-card__media video {
+  .fieldwork-hero-panel__media video {
     display: none;
   }
 
-  .fieldwork-hero-panel__media img,
-  .fieldwork-card__media img {
+  .fieldwork-hero-panel__media img {
     display: block;
   }
 }
