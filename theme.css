@@ -506,6 +506,112 @@ select {
   align-items: start;
 }
 
+.fieldwork-hero-panel,
+.fieldwork-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.fieldwork-hero-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(21rem, 1.18fr);
+  margin-top: 2.2rem;
+  background: rgba(255, 252, 247, 0.14);
+  box-shadow: var(--shadow-strong);
+  backdrop-filter: blur(12px);
+}
+
+.fieldwork-hero-panel__copy {
+  padding: 1.5rem;
+}
+
+.fieldwork-hero-panel__eyebrow,
+.fieldwork-card__eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.fieldwork-hero-panel__eyebrow {
+  color: rgba(248, 245, 239, 0.76);
+}
+
+.fieldwork-card__eyebrow {
+  color: var(--accent);
+}
+
+.fieldwork-hero-panel__copy h2,
+.fieldwork-card__body h3 {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  line-height: 1.1;
+}
+
+.fieldwork-hero-panel__copy h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.fieldwork-hero-panel__copy p:last-child {
+  margin-bottom: 0;
+  color: rgba(248, 245, 239, 0.84);
+}
+
+.fieldwork-hero-panel__media,
+.fieldwork-card__media {
+  position: relative;
+  background: rgba(11, 18, 16, 0.48);
+}
+
+.fieldwork-hero-panel__media {
+  min-height: 21rem;
+}
+
+.fieldwork-hero-panel__media video,
+.fieldwork-hero-panel__media img,
+.fieldwork-card__media video,
+.fieldwork-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fieldwork-hero-panel__media img,
+.fieldwork-card__media img {
+  display: none;
+}
+
+.fieldwork-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.fieldwork-card {
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.fieldwork-card__media {
+  aspect-ratio: 16 / 9;
+}
+
+.fieldwork-card__body {
+  padding: 1.15rem;
+}
+
+.fieldwork-card__body h3 {
+  font-size: 1.45rem;
+}
+
+.fieldwork-card__body p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .album-card,
 .archive-card,
 .person-card {
@@ -805,7 +911,8 @@ select {
   .publication-grid--compact,
   .album-grid,
   .album-grid--compact,
-  .archive-grid {
+  .archive-grid,
+  .fieldwork-grid {
     grid-template-columns: 1fr;
   }
 
@@ -816,11 +923,16 @@ select {
   .split-callout,
   .contact-panel,
   .gallery-intro-card,
-  .gallery-intro-card--hub {
+  .gallery-intro-card--hub,
+  .fieldwork-hero-panel {
     grid-template-columns: 1fr;
   }
 
   .photo-panel img {
+    min-height: 18rem;
+  }
+
+  .fieldwork-hero-panel__media {
     min-height: 18rem;
   }
 
@@ -903,16 +1015,19 @@ select {
   .album-card__body,
   .archive-card__body,
   .person-card__body,
+  .fieldwork-card__body,
   .split-callout__copy,
   .contact-panel > div:first-child,
   .contact-panel__actions,
   .gallery-intro-card__copy,
-  .gallery-intro-card__stats {
+  .gallery-intro-card__stats,
+  .fieldwork-hero-panel__copy {
     padding: 1.1rem;
   }
 
   .people-grid,
-  .gallery-grid {
+  .gallery-grid,
+  .fieldwork-grid {
     grid-template-columns: 1fr;
   }
 
@@ -927,6 +1042,22 @@ select {
 
   .lightbox__frame {
     padding: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .fieldwork-hero-panel__media video,
+  .fieldwork-card__media video {
+    display: none;
+  }
+
+  .fieldwork-hero-panel__media img,
+  .fieldwork-card__media img {
+    display: block;
   }
 }
 

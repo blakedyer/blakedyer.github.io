@@ -155,6 +155,42 @@
     });
   }
 
+  function setupMotionVideos() {
+    const videos = Array.from(document.querySelectorAll("[data-motion-video]"));
+    if (!videos.length || !window.matchMedia) {
+      return;
+    }
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    const sync = () => {
+      if (reducedMotion.matches) {
+        videos.forEach((video) => {
+          video.pause();
+          video.currentTime = 0;
+        });
+        return;
+      }
+
+      videos.forEach((video) => {
+        if (video.dataset.motionVideo === "hero") {
+          const playAttempt = video.play();
+          if (playAttempt && typeof playAttempt.catch === "function") {
+            playAttempt.catch(() => {});
+          }
+        }
+      });
+    };
+
+    sync();
+
+    if (typeof reducedMotion.addEventListener === "function") {
+      reducedMotion.addEventListener("change", sync);
+    } else if (typeof reducedMotion.addListener === "function") {
+      reducedMotion.addListener(sync);
+    }
+  }
+
   function createIntroMarkup(gallery) {
     const paragraphs = [gallery.summary].concat(gallery.intro || []);
     const paragraphMarkup = paragraphs
@@ -354,6 +390,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     setupNav();
+    setupMotionVideos();
     renderCounts();
     renderHome();
     renderPublications();
