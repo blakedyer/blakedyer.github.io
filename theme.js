@@ -163,6 +163,25 @@
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+    const playHeroVideo = (video) => {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.autoplay = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.setAttribute("muted", "");
+      video.setAttribute("playsinline", "");
+
+      if (video.readyState === 0) {
+        video.load();
+      }
+
+      const playAttempt = video.play();
+      if (playAttempt && typeof playAttempt.catch === "function") {
+        playAttempt.catch(() => {});
+      }
+    };
+
     const sync = () => {
       if (reducedMotion.matches) {
         heroVideos.forEach((video) => {
@@ -173,12 +192,23 @@
       }
 
       heroVideos.forEach((video) => {
-        const playAttempt = video.play();
-        if (playAttempt && typeof playAttempt.catch === "function") {
-          playAttempt.catch(() => {});
-        }
+        playHeroVideo(video);
       });
     };
+
+    heroVideos.forEach((video) => {
+      video.addEventListener("loadedmetadata", () => {
+        if (!reducedMotion.matches) {
+          playHeroVideo(video);
+        }
+      });
+
+      video.addEventListener("canplay", () => {
+        if (!reducedMotion.matches) {
+          playHeroVideo(video);
+        }
+      });
+    });
 
     sync();
 
