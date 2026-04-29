@@ -8,7 +8,7 @@ window.EARTH_HISTORY = {
       link: "papers/vanWieren2026b.pdf",
       tags: ["carbon-cycle", "stratigraphy", "methods"],
       summary:
-        "Tests whether spatially variable remineralization of organic matter can generate very negative carbonate carbon-isotope excursions, showing how local sedimentary recycling can mimic signals often attributed to global carbon-cycle change."
+        "Models how spatially variable remineralization of organic matter can generate very negative carbonate carbon-isotope excursions, showing how basic stratigraphic context and early diagenesis can create signals that are often attributed to global carbon-cycle change."
     },
     {
       year: 2026,
