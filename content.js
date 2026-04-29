@@ -3,6 +3,16 @@ window.EARTH_HISTORY = {
     {
       year: 2026,
       authors: "Edmonsond, S., Dyer, B.",
+      title: "Spatially heterogeneous organic carbon remineralization as a driver for highly negative carbonate δ13C excursions",
+      journal: "Earth and Planetary Science Letters, 120058",
+      link: "https://doi.org/10.1016/j.epsl.2026.120058",
+      tags: ["carbon-cycle", "stratigraphy", "methods"],
+      summary:
+        "Tests whether spatially variable remineralization of organic matter can generate very negative carbonate carbon-isotope excursions, showing how local sedimentary recycling can mimic signals often attributed to global carbon-cycle change."
+    },
+    {
+      year: 2026,
+      authors: "Edmonsond, S., Dyer, B.",
       title: "Timing and magnitude of the Lomagundi-Jatuli carbon isotope excursion",
       journal: "Proceedings of the National Academy of Sciences, 123(2), e2512767123",
       link: "papers/Edmonsond2026.pdf",
