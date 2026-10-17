@@ -1,9 +1,10 @@
 Cook Islands field album — simplified review, 17 October 2026
 
-The homepage, fieldwork.html and theme.css are restored exactly to the pre-integration
-versions. A Cook Islands album is added to gallery-data.js, appearing in the existing
+The homepage and fieldwork.html are restored exactly to their pre-integration
+versions. The original theme is preserved, with one scoped gallery scrim for
+text contrast over Totiko’s waves. A Cook Islands album is added to gallery-data.js, appearing in the existing
 three-album homepage row and the Field Photos grid. No separate campaign section,
-hero shortcut, narrative research page or custom campaign CSS remains.
+hero shortcut, narrative research page or campaign layout CSS remains.
 
 cook-islands.html now follows the existing Hawaii field-album template: a photo
 hero, short date line, photo grid and the same keyboard/tap lightbox. The old URL

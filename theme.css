@@ -2110,3 +2110,8 @@ button:focus-visible,
     padding: 0.5rem 0.75rem;
   }
 }
+
+/* Keep album text readable over the brighter waves in the Totiko photograph. */
+body[data-gallery="cook-islands"] .hero::before {
+  background-color: rgba(12, 18, 17, 0.12);
+}
