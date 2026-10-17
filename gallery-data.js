@@ -1,6 +1,19 @@
 window.EARTH_HISTORY_GALLERIES = {
   "albums": [
     {
+      "slug": "cook-islands",
+      "anchor": "cook-islands",
+      "title": "Cook Islands",
+      "count": 12,
+      "meta": "May\u2013June 2026 \u00b7 12 photos",
+      "link": "cook-islands.html",
+      "image": "assets/images/cook-islands/hs107-coastal-setting.jpg",
+      "summary": "Raised reefs, living corals and fieldwork in the Southern Cook Islands.",
+      "featured": true,
+      "projectUrl": "https://blakedyer.github.io/cook_islands_2026/",
+      "projectLabel": "Project & field atlas"
+    },
+    {
       "slug": "hawaii",
       "title": "Hawaii",
       "count": 136,
@@ -14085,6 +14098,97 @@ window.EARTH_HISTORY_GALLERIES = {
             "Indonesia"
           ],
           "archive_path": "web/photo-system/v1/full/2012/09/06/20120906-162033-e3d82e61feb5-ed9361c681b0.jpg"
+        }
+      ]
+    },
+    "cook-islands": {
+      "title": "Cook Islands 2026",
+      "summary": "Reefs, coastlines and fieldwork \u00b7 May\u2013June 2026",
+      "heroImage": "assets/images/cook-islands/hs107-coastal-setting.jpg",
+      "photos": [
+        {
+          "src": "assets/images/cook-islands/hs107-coastal-setting.jpg",
+          "display": "assets/images/cook-islands/hs107-coastal-setting.jpg",
+          "thumb": "assets/images/cook-islands/hs107-coastal-setting.jpg",
+          "caption": "Totiko, Atiu \u2014 waves beneath the limestone cliff.",
+          "alt": "Low-oblique drone view at HS107 near Totiko, with turquoise waves spilling across a dark coastal bench below a pale undercut limestone cliff and rough ground with low vegetation."
+        },
+        {
+          "src": "assets/images/cook-islands/makatea-living-coral.jpg",
+          "display": "assets/images/cook-islands/makatea-living-coral.jpg",
+          "thumb": "assets/images/cook-islands/makatea-living-coral.jpg",
+          "caption": "Living coral in shallow water, Mauke.",
+          "alt": "Branching and rounded living corals growing in clear shallow water over a sandy reef surface."
+        },
+        {
+          "src": "assets/images/cook-islands/hs113-field-relief.jpg",
+          "display": "assets/images/cook-islands/hs113-field-relief.jpg",
+          "thumb": "assets/images/cook-islands/hs113-field-relief.jpg",
+          "caption": "Surveying the jagged limestone at Saragossa II, Mangaia.",
+          "alt": "Fieldworker with a GPS pole in a vegetation-lined low beneath rising jagged limestone relief at HS113 Saragossa II."
+        },
+        {
+          "src": "assets/images/cook-islands/hs119-wall-reef-flat.jpg",
+          "display": "assets/images/cook-islands/hs119-wall-reef-flat.jpg",
+          "thumb": "assets/images/cook-islands/hs119-wall-reef-flat.jpg",
+          "caption": "Reef-limestone wall and modern reef flat at Uriaata, Mauke.",
+          "alt": "Broad side view of an undercut reef-limestone wall at Uriaata, with vegetation above, the exposed reef flat in front, and open ocean at right."
+        },
+        {
+          "src": "assets/images/cook-islands/hs125-perspective.jpg",
+          "display": "assets/images/cook-islands/hs125-perspective.jpg",
+          "thumb": "assets/images/cook-islands/hs125-perspective.jpg",
+          "caption": "Reef flat and forest edge at Okore, Mitiaro.",
+          "alt": "Oblique aerial view of HS125 along Mitiaro\u2019s west coast, with ocean and wave-washed reef flat at left, a broad pale coastal surface in the center, and dense forest at right."
+        },
+        {
+          "src": "assets/images/cook-islands/hs101-branching-framework.jpg",
+          "display": "assets/images/cook-islands/hs101-branching-framework.jpg",
+          "thumb": "assets/images/cook-islands/hs101-branching-framework.jpg",
+          "caption": "Branching fossil-coral framework at Matai, Atiu.",
+          "alt": "Wide view of dense branching coral framework exposed in dark limestone above pale beach sand, with survey gear and a partial view of a fieldworker at the vegetated rim."
+        },
+        {
+          "src": "assets/images/cook-islands/makatea-beach-backreef.jpg",
+          "display": "assets/images/cook-islands/makatea-beach-backreef.jpg",
+          "thumb": "assets/images/cook-islands/makatea-beach-backreef.jpg",
+          "caption": "Evening light across the back reef, Mauke.",
+          "alt": "Calm shallow back-reef water beside a pale pocket beach and a low vegetated limestone cliff at sunset."
+        },
+        {
+          "src": "assets/images/cook-islands/hs124-channel-survey.jpg",
+          "display": "assets/images/cook-islands/hs124-channel-survey.jpg",
+          "thumb": "assets/images/cook-islands/hs124-channel-survey.jpg",
+          "caption": "Surveying a reef-rock channel at Te Rua O Te Pui, Mitiaro.",
+          "alt": "Two fieldworkers among jagged reef rock at HS124, with one beside a red survey tripod above a narrow turquoise channel and the other near a pale inland track."
+        },
+        {
+          "src": "assets/images/cook-islands/hs123-coast-notch.jpg",
+          "display": "assets/images/cook-islands/hs123-coast-notch.jpg",
+          "thumb": "assets/images/cook-islands/hs123-coast-notch.jpg",
+          "caption": "Recessed coastal limestone at Te Rotonui, Mitiaro.",
+          "alt": "Close oblique view of a recessed, coral-rich limestone wall at HS123, with the exposed reef-flat path and ocean edge visible to the left."
+        },
+        {
+          "src": "assets/images/cook-islands/makatea-fossil-coral.jpg",
+          "display": "assets/images/cook-islands/makatea-fossil-coral.jpg",
+          "thumb": "assets/images/cook-islands/makatea-fossil-coral.jpg",
+          "caption": "Fossil coral preserved in raised reef limestone.",
+          "alt": "Weathered fossil coral skeletons preserved among pale grey raised-reef limestone."
+        },
+        {
+          "src": "assets/images/cook-islands/makatea-transect-aerial.jpg",
+          "display": "assets/images/cook-islands/makatea-transect-aerial.jpg",
+          "thumb": "assets/images/cook-islands/makatea-transect-aerial.jpg",
+          "caption": "From ocean to forest on Mitiaro\u2019s west coast.",
+          "alt": "Vertical drone view from deep blue ocean across breaking waves, the shallow living reef, a pale beach, raised limestone, and dense forest."
+        },
+        {
+          "src": "assets/images/cook-islands/team-mangaia.jpg",
+          "display": "assets/images/cook-islands/team-mangaia.jpg",
+          "thumb": "assets/images/cook-islands/team-mangaia.jpg",
+          "caption": "The HISEAS field team on Mangaia.",
+          "alt": "Seven members of the Cook Islands 2026 HISEAS field team stand together on a turquoise bench amid dark raised-reef limestone and coastal plants on Mangaia, holding a Lamont-Doherty Earth Observatory flag."
         }
       ]
     }

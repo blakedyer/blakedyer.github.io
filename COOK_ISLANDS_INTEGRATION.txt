@@ -1,41 +1,29 @@
-Cook Islands research integration
+Cook Islands field album — simplified review, 17 October 2026
 
-Purpose and editing
-The research homepage features the 2026 campaign immediately after the landing
-overview, with a hero shortcut. Field Photos includes a compact entry before
-its existing albums. Both lead to cook-islands.html, a concise research summary
-that connects field observation, dating, elevation and geodynamic interpretation.
-Styling uses the existing theme.css tokens, with scoped campaign-* selectors.
-The new page is included in sitemap.xml. Its canonical URL will be
-https://blakedyer.github.io/cook-islands.html after deployment.
+The homepage, fieldwork.html and theme.css are restored exactly to the pre-integration
+versions. A Cook Islands album is added to gallery-data.js, appearing in the existing
+three-album homepage row and the Field Photos grid. No separate campaign section,
+hero shortcut, narrative research page or custom campaign CSS remains.
 
-Canonical record
-https://blakedyer.github.io/cook_islands_2026/ owns the evolving field record.
-The new research page links to its Field Report, Sites and Tidal Datums routes;
-it does not copy datasets or embed tour systems. It also connects HISEAS and
-the existing sea-level publication section. Initial observations are explicitly
-distinguished from a final sea-level history. Do not add ages or numerical
-sea-level conclusions until the canonical report and analyses support them.
-Image provenance: assets/images/cook-islands/SOURCES.json. Both accepted campaign
-images are copied without altering their pixels; descriptive captions are kept.
+cook-islands.html now follows the existing Hawaii field-album template: a photo
+hero, short date line, photo grid and the same keyboard/tap lightbox. The old URL
+is preserved. Twelve accepted campaign photographs have concise source-grounded
+captions. Totiko (HS107), Atiu leads; living coral, fossil textures, field surveys,
+coastal views and the team provide visual variety. SOURCES.json retains the
+accepted derivative metadata and SHA256 for every byte-identical copied image.
 
-Build and review
-This repository publishes static HTML/CSS/JS directly; there is no build step.
-python3 -m http.server 8122 --bind 127.0.0.1 --directory .
-Review /, /#cook-islands, /cook-islands.html and /fieldwork.html#cook-islands.
+Edit gallery-data.js > albums[cook-islands] and galleries[cook-islands].
+The shared album renderer accepts optional anchor/projectUrl/projectLabel fields.
+Only the Cook Islands card uses them. The project link is small and separate from
+Open album. The gallery toolbar also links directly to the canonical project:
+https://blakedyer.github.io/cook_islands_2026/
 
-Deployment, only after approval
-Review and merge the integration branch into master through the existing Git
-workflow. A push to master triggers the existing GitHub Pages workflow, which
-uploads the repository root. Verify the new project URL, homepage entry,
-Field Photos entry, keyboard menu and canonical atlas links afterward.
-No external account, domain, credential or deployment settings need changing.
-No push or deployment was performed for this task.
+The site is static HTML/CSS/JS with no build step. The existing photo remapping
+scripts are maintenance utilities, not build prerequisites; retain these local
+accepted image paths unless intentionally migrating their source records.
+Review: http://carbonate.seos.uvic.ca:11100/reviews/cook-islands-integration-20261017/research/cook-islands.html
+The prior /#cook-islands and /fieldwork.html#cook-islands links target the album card.
 
-Evidence and isolation
-Chromium checks cover all three changed pages at 1440, 1024, 390 and 320 pixels,
-with loaded images, no overflow or JavaScript errors, local links, keyboard
-navigation and no-JS project content. Axe found no A/AA violations in new scopes;
-the inherited background gradient required numeric contrast follow-up, which
-passed. Evidence lives beside the worktree in ../review and the Library bundle.
-The shared research source checkout and Cook Islands source/tours were untouched.
+After approval, merge this isolated branch through the usual Git workflow.
+A push to master triggers the existing GitHub Pages workflow. No push was performed.
+No credentials, domain settings, external accounts, canonical data or tours changed.

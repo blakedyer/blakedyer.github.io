@@ -439,7 +439,7 @@
     const imageSource = bestImageSource(imageVariants) || album.image;
 
     return `
-      <article class="album-card expedition-card">
+      <article class="album-card expedition-card"${album.anchor ? ` id="${escapeHtml(album.anchor)}"` : ""}>
         <a class="album-card__image" href="${escapeHtml(album.link)}">
           <img src="${escapeHtml(imageSource)}"${sourceSet} alt="${escapeHtml(album.title)} album preview" loading="lazy" decoding="async">
         </a>
@@ -455,6 +455,7 @@
           }
           ${summaryMarkup}
           <a class="text-link" href="${escapeHtml(album.link)}">Open album</a>
+          ${album.projectUrl ? `<p><a class="text-link" href="${escapeHtml(album.projectUrl)}">${escapeHtml(album.projectLabel || "Project website")}</a></p>` : ""}
         </div>
       </article>
     `;
