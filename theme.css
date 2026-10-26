@@ -2224,11 +2224,6 @@ body[data-gallery="cook-islands"] .hero::before {
   padding-top: 2.5rem;
 }
 
-.collaborators .section-heading h2 {
-  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-  line-height: 1.2;
-}
-
 .collaborator-grid {
   display: grid;
   grid-template-columns: repeat(9, minmax(0, 1fr));
