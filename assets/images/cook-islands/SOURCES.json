@@ -409,5 +409,33 @@
     },
     "sha256": "67defa09798689bc6ee176f17468ef3cec99ebf44fa31e67eb5d904b8254c919",
     "reuse": "Unmodified copy of accepted report image; no new crop, tonal edit or generated content."
+  },
+  {
+    "file": "hs123-model-wireframe.webp",
+    "source_repository": "https://github.com/blakedyer/cook_islands_2026",
+    "source_path": "static/img/trip-report/hs123-model-wireframe.webp",
+    "source_record": "data/trip_report.yml > methods_feature",
+    "use": "Unmodified photogrammetric model render for the field guide and exact-view comparison."
+  },
+  {
+    "file": "hs123-model-texture.webp",
+    "source_repository": "https://github.com/blakedyer/cook_islands_2026",
+    "source_path": "static/img/trip-report/hs123-model-texture.webp",
+    "source_record": "data/trip_report.yml > methods_feature",
+    "use": "Unmodified photogrammetric model render for the field guide and exact-view comparison."
+  },
+  {
+    "file": "hs123-model-crossfade.webp",
+    "source_repository": "https://github.com/blakedyer/cook_islands_2026",
+    "source_path": "static/img/trip-report/hs123-model-crossfade.webp",
+    "source_record": "data/trip_report.yml > methods_feature",
+    "use": "Unmodified photogrammetric model render for the field guide and exact-view comparison."
+  },
+  {
+    "file": "hs123-terrain-model.webp",
+    "source_repository": "https://github.com/blakedyer/cook_islands_2026",
+    "source_path": "static/img/trip-report/hs123-terrain-model.webp",
+    "source_record": "data/trip_report.yml > methods_feature",
+    "use": "Unmodified photogrammetric model render for the field guide and exact-view comparison."
   }
 ]

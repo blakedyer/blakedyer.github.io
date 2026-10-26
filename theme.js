@@ -281,17 +281,15 @@
     const detailMarkup = compact
       ? `<p class="paper-journal">${escapeHtml(publication.journal)}</p>`
       : `
-        <ul class="tag-list">${tags}</ul>
-        <p class="paper-summary">${escapeHtml(publication.summary)}</p>
         <p class="paper-authors">${escapeHtml(publication.authors)}</p>
         <p class="paper-journal">${escapeHtml(publication.journal)}</p>
         <div class="link-row paper-resources">${resources}</div>
+        <details class="paper-detail"><summary>What this paper adds</summary><p class="paper-summary">${escapeHtml(publication.summary)}</p><ul class="tag-list">${tags}</ul></details>
       `;
 
     return `
       <article id="${escapeHtml(id)}" class="paper-card publication-entry${compact ? " paper-card--compact publication-entry--compact" : ""}" data-tags="${escapeHtml(publication.tags.join(" "))}" data-publication-id="${escapeHtml(id)}" tabindex="-1" aria-labelledby="${escapeHtml(id)}-title">
         <div class="paper-card__top">
-          <p class="paper-year">${escapeHtml(publication.year)}</p>
           <a class="paper-link" href="${escapeHtml(publication.link)}" target="_blank" rel="noopener">PDF</a>
         </div>
         <h3 class="paper-title" id="${escapeHtml(id)}-title">
@@ -423,7 +421,7 @@
     `;
   }
 
-  function albumMarkup(album) {
+  function albumMarkup(album, compact = false) {
     const meta = album.meta || `${album.count} photos`;
     const contextItems = [album.location, album.dateRange, album.context].filter(Boolean);
     const summaryMarkup =
@@ -442,6 +440,10 @@
         ? ` srcset="${responsiveSourceSet(imageVariants, escapeHtml)}" sizes="${ALBUM_IMAGE_SIZES}"`
         : "";
     const imageSource = bestImageSource(imageVariants) || album.image;
+
+    if (compact) {
+      return `<article class="album-card expedition-card"><a class="album-card__image" href="${escapeHtml(album.link)}"><img src="${escapeHtml(imageSource)}"${sourceSet} alt="${escapeHtml(album.title)} field album" loading="lazy"></a><div class="album-card__body"><h3><a href="${escapeHtml(album.link)}">${escapeHtml(album.title)}</a></h3><p class="album-card__meta">${escapeHtml(album.count)} photographs</p></div></article>`;
+    }
 
     return `
       <article class="album-card expedition-card"${album.anchor ? ` id="${escapeHtml(album.anchor)}"` : ""}>
@@ -624,7 +626,7 @@
       return;
     }
 
-    container.innerHTML = albums.map((album) => albumMarkup(album)).join("");
+    container.innerHTML = albums.map((album) => albumMarkup(album, container.hasAttribute("data-compact"))).join("");
   }
 
   function renderCounts() {

@@ -75,7 +75,7 @@ def publication_markup(p):
     resources = ''.join(f'<a href="{escape(r["url"], quote=True)}">{escape(r["label"])}</a>' for r in p.get('resources', []))
     if p.get('doi'):
         resources = f'<a href="https://doi.org/{escape(p["doi"])}">Journal / DOI</a>' + resources
-    return f'''<article id="{key}" class="paper-card publication-entry" data-tags="{' '.join(p['tags'])}" data-publication-id="{key}" tabindex="-1" aria-labelledby="{key}-title"><div class="paper-card__top"><p class="paper-year">{p['year']}</p><a class="paper-link" href="{escape(p['link'])}" target="_blank" rel="noopener">PDF</a></div><h3 class="paper-title" id="{key}-title"><a href="{escape(p['link'])}" target="_blank" rel="noopener">{escape(p['title'])}</a></h3><ul class="tag-list">{tags}</ul><p class="paper-summary">{escape(p['summary'])}</p><p class="paper-authors">{escape(p['authors'])}</p><p class="paper-journal">{escape(p['journal'])}</p><div class="link-row paper-resources">{resources}</div></article>'''
+    return f'''<article id="{key}" class="paper-card publication-entry" data-tags="{' '.join(p['tags'])}" data-publication-id="{key}" tabindex="-1" aria-labelledby="{key}-title"><div class="paper-card__top"><a class="paper-link" href="{escape(p['link'])}" target="_blank" rel="noopener">PDF</a></div><h3 class="paper-title" id="{key}-title"><a href="{escape(p['link'])}" target="_blank" rel="noopener">{escape(p['title'])}</a></h3><p class="paper-authors">{escape(p['authors'])}</p><p class="paper-journal">{escape(p['journal'])}</p><div class="link-row paper-resources">{resources}</div><details class="paper-detail"><summary>What this paper adds</summary><p class="paper-summary">{escape(p['summary'])}</p><ul class="tag-list">{tags}</ul></details></article>'''
 
 
 def publications_markup(publications):
@@ -84,7 +84,7 @@ def publications_markup(publications):
 
 
 def album_markup(album):
-    return f'''<article class="album-card expedition-card"><a class="album-card__image" href="{escape(album['link'])}"><img src="{escape(album['image'])}" alt="{escape(album['title'])} field album" loading="lazy"></a><div class="album-card__body"><h3><a href="{escape(album['link'])}">{escape(album['title'])}</a></h3><p>{escape(album.get('summary', ''))}</p><a class="text-link" href="{escape(album['link'])}">Open album</a></div></article>'''
+    return f'''<article class="album-card expedition-card"><a class="album-card__image" href="{escape(album['link'])}"><img src="{escape(album['image'])}" alt="{escape(album['title'])} field album" loading="lazy"></a><div class="album-card__body"><h3><a href="{escape(album['link'])}">{escape(album['title'])}</a></h3><p class="album-card__meta">{album['count']} photographs</p></div></article>'''
 
 
 def build():

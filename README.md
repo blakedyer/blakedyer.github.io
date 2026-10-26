@@ -24,19 +24,37 @@ The October 2026 feedback preview is also running as the temporary local user
 service `earth-history-preview.service`. Stop it with
 `systemctl --user stop earth-history-preview.service` when review is finished.
 
-## Review focus
+## Revision plan: a short visit first
 
-The first implementation connects the homepage, research, people, recruitment,
-fieldwork, publications, and a new partnerships page. A guided Te Rotonui page
-embeds the two existing 3D animations, explains the evidence, and links to the
-full site record. Atlas browsing and photo search use the existing public portals.
+The site should make sense during a brief visit. Photographs and useful
+interactions carry the first explanation; detail is available on demand.
 
-Useful next editorial decisions are the balance among research themes, the
-recruitment and mentoring language, which additional field stories deserve
-guided treatment, and how specific the partnership invitation should become.
-Start dates, funded openings, and an institutional giving destination remain
-items to add when confirmed. Free-camera 3D controls and a full embedded atlas
-are not part of this first implementation.
+| Surface | Visitor’s next step | Editing rule |
+| --- | --- | --- |
+| Home | Choose a research interest or join the group | One sentence of purpose, three visual routes, one field experience |
+| Research | Find a question and supporting evidence | One short explanation per theme; methods expand on request |
+| Fieldwork | Try an experience or find a resource | Lead with the 3D comparison; maps, search, and regional albums follow |
+| Te Rotonui | See what a reconstruction adds | Texture-to-mesh slider first; rotation shows the wider geometry |
+| Join us | Decide whether to make contact | Fit and email first; admissions, funding, and mentoring in disclosures |
+| People | Find a person or an alumni destination | Portrait, role, one-line research focus, links |
+| Publications | Find and open a paper | Titles and citations first; summaries expand individually |
+| Partnerships | Understand what support enables | People, discovery, access; one contact route |
+
+Each topic has a home. Research explanations belong on Research, alumni
+outcomes on People, and mentoring details on Join us. The homepage points to
+these rather than repeating them. Avoid introductory sections that merely
+restate the next heading. Keep normal paragraphs to one or two sentences.
+
+Interactions must demonstrate something: the comparison exposes the geometric
+mesh beneath the photographic texture; the rotation connects a close outcrop
+to its wider coastline. Neither autoplays. Both remain useful as still images,
+and the comparison works with a keyboard. Publication filters and archive search
+are for finding evidence, not decoration.
+
+Start dates, funded openings, and an institutional giving destination can be
+added when confirmed. Free-camera 3D controls and a full embedded atlas remain
+possible extensions; add them only when they make a specific question easier
+to explore. The full portals remain accessible from Fieldwork.
 
 ## Before committing
 
@@ -57,9 +75,10 @@ they agree. Pushing `master` deploys the site; local commits do not.
 - Public recruitment text describes research directions; funding and start dates
   should only be advertised when confirmed.
 - Core pages include readable content without JavaScript. Filters, galleries,
-  and guided tabs enhance the static pages.
+  and the model comparison enhance the static pages.
 - Cook Islands photographs already published in this repository are documented
   in `assets/images/cook-islands/SOURCES.json`.
-- Te Rotonui animations stream from the existing public field-media host only
-  after a visitor selects a view. The full portal remains the detailed record.
+- The compact Te Rotonui overview is copied unchanged from the Cook Islands
+  report assets and loads on demand. Model renders and video provenance are
+  recorded in the asset manifests. The full portal remains the detailed record.
 - Keep private proposals and unpublished data outside this repository.
