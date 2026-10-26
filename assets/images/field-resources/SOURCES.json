@@ -1,11 +1,81 @@
 [
   {
-    "file": "bahamas-atlas.webp",
-    "source_repository": "https://github.com/blakedyer/field_atlas",
-    "source_path": "/limestone/jupyter/blake/field_guide/mockups/assets/maps/archive-region-the-bahamas-styletransfer.webp",
+    "file": "hiseas-logo.jpg",
+    "source_path": "/limestone/jupyter/blake/hiseas/static/assets/images/current-site/01-997266_84ea77a77321454aadee4e00f066d0ae~mv2.jpg",
+    "source_page": "https://www.hiseas.org/",
+    "reuse": "Unmodified original HiSEAS wave logo.",
+    "sha256": "9d22d4147d47fc2889b25a00f2bc4f8cfa88dd754a81791d3e0da0d9fdfef175"
+  },
+  {
+    "file": "bahamas-sites.svg",
+    "source_path": "/limestone/jupyter/blake/field_guide/.cache/curated-map-backgrounds/semantic-masks/19248a8dcea0ac2c401b7fe8.source.png",
     "source_metadata": "/limestone/jupyter/blake/field_guide/mockups/assets/maps/archive-region-the-bahamas-styletransfer.json",
-    "attribution": "Map background derived from Esri; land polygons \u00a9 OpenStreetMap contributors",
-    "reuse": "Unmodified copy of existing field atlas map; display crop only.",
-    "sha256": "65df8fae39dc58da26857ed6dc81af1e29b43faca5a98692a9ca8c2763d56390"
+    "attribution": "Esri World Imagery; site coordinates from the field atlas.",
+    "reuse": "Geographic crop and web encoding of existing satellite imagery; vector dots at actual field-site coordinates.",
+    "map_bounds": {
+      "min_lat": 20.2,
+      "max_lat": 27.1,
+      "min_lon": -79.7,
+      "max_lon": -71.3
+    },
+    "sites": [
+      {
+        "site": "b1001",
+        "lat": 23.959901025,
+        "lon": -74.49035377,
+        "x": 386.89,
+        "y": 258.55,
+        "color": "#61d4cb"
+      },
+      {
+        "site": "b1101",
+        "lat": 22.802768005,
+        "lon": -74.339634836,
+        "x": 398.09,
+        "y": 352.19,
+        "color": "#61d4cb"
+      },
+      {
+        "site": "b1119",
+        "lat": 23.604403623000003,
+        "lon": -75.272090185,
+        "x": 328.82,
+        "y": 287.4,
+        "color": "#bb9eef"
+      },
+      {
+        "site": "b1121",
+        "lat": 23.077594555999998,
+        "lon": -74.921254664,
+        "x": 354.89,
+        "y": 330.02,
+        "color": "#bb9eef"
+      },
+      {
+        "site": "b701",
+        "lat": 23.601290701999996,
+        "lon": -75.89887745600001,
+        "x": 282.27,
+        "y": 287.65,
+        "color": "#f6b44d"
+      },
+      {
+        "site": "b725",
+        "lat": 25.0146053,
+        "lon": -77.51694482399999,
+        "x": 162.07,
+        "y": 172.46,
+        "color": "#e96d86"
+      },
+      {
+        "site": "b812",
+        "lat": 21.008864899000002,
+        "lon": -73.69728606,
+        "x": 445.8,
+        "y": 495.81,
+        "color": "#f6b44d"
+      }
+    ],
+    "sha256": "b22b3bace5098962762b0f1d78bb212c10bae90adeb68b8a4e887b499d3d64c1"
   }
 ]

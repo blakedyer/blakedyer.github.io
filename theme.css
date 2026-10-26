@@ -1316,21 +1316,46 @@ button:focus-visible,
   color: var(--accent-dark);
 }
 
-.field-resources .atlas-route {
-  grid-template-columns: 8.5rem minmax(0, 1fr);
+.field-resources__heading {
+  display: flex;
   align-items: center;
-  border: 0;
-  padding: 1rem 0;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.field-resources__heading::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--line);
+}
+
+.field-resources__heading h2 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.field-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 3rem;
 }
 
 .field-resource {
-  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  align-items: start;
+  gap: 1.25rem;
 }
 
 .field-resource__visual {
   display: block;
   width: 100%;
-  height: 6.5rem;
+  aspect-ratio: 1;
   overflow: hidden;
   border-radius: 0.25rem;
 }
@@ -1341,39 +1366,51 @@ button:focus-visible,
   object-fit: cover;
 }
 
-.field-resource__visual--map img {
-  object-position: center 30%;
+.field-resource__visual--logo img {
+  object-fit: contain;
 }
 
-.field-resource__related,
-.field-resource__credit {
-  margin: -0.35rem 0 1rem 9.5rem;
-  font-size: 0.84rem;
+.field-resource__copy h3 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  line-height: 1.15;
+}
+
+.field-resource__copy h3 a {
+  color: var(--ink);
+}
+
+.field-resource__copy h3 a:hover,
+.field-resource__copy h3 a:focus-visible {
+  color: var(--accent-dark);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.field-resource__copy p {
+  margin: 0 0 0.65rem;
   color: var(--muted);
 }
 
-.field-resource__credit {
-  font-size: 0.72rem;
+.field-resource__related {
+  font-size: 0.84rem;
 }
 
-.field-resource__credit a {
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+@media (max-width: 960px) {
+  .field-resource-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
-  .field-resources .atlas-route {
-    grid-template-columns: 6.5rem minmax(0, 1fr);
-    gap: 0.85rem;
+  .field-resource {
+    grid-template-columns: 6rem minmax(0, 1fr);
+    gap: 1rem;
   }
 
-  .field-resources .atlas-route strong {
+  .field-resource__copy h3 {
     font-size: 1.3rem;
-  }
-
-  .field-resource__related,
-  .field-resource__credit {
-    margin-left: 7.35rem;
   }
 }
 
@@ -2185,6 +2222,11 @@ body[data-gallery="cook-islands"] .hero::before {
 .collaborators__band {
   border-top: 1px solid var(--line);
   padding-top: 2.5rem;
+}
+
+.collaborators .section-heading h2 {
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  line-height: 1.2;
 }
 
 .collaborator-grid {

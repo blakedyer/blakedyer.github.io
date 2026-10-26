@@ -12,7 +12,7 @@
           <link rel="icon" href="favicon.ico">
           <link rel="icon" type="image/png" sizes="96x96" href="android-chrome-96x96.png">
           <meta name="theme-color" content="#f6f3ed">
-          <link rel="stylesheet" href="theme.css?v=20261026-albums-curated-2">
+          <link rel="stylesheet" href="theme.css?v=20261026-field-links">
           <script defer src="content.js"></script>
           <script defer src="gallery-data.js"></script>
           <script defer src="theme.js?v=20261026-albums-curated"></script>
@@ -68,34 +68,29 @@
               <div class="album-grid expedition-grid" id="album-grid"></div>
             </section>
 
-            <section class="section atlas-overview field-resources" aria-labelledby="field-resources-title">
-              <div class="atlas-overview__copy">
-                <h2 id="field-resources-title">Maps, notes &amp; 3D.</h2>
+            <section class="section field-resources" aria-labelledby="field-resources-title">
+              <div class="field-resources__heading">
+                <h2 id="field-resources-title">Other field links</h2>
               </div>
-              <div class="atlas-route-list">
+              <div class="field-resource-grid">
                 <div class="field-resource">
-                  <a class="atlas-route" href="https://blakedyer.github.io/cook_islands_2026/">
-                    <span class="field-resource__visual">
-                      <img src="assets/images/cook-islands/hs107-coastal-setting.jpg" alt="Waves beneath the limestone cliffs at Totiko, Atiu" width="1600" height="1200" loading="lazy">
-                    </span>
-                    <span>
-                      <strong>Cook Islands field portal</strong>
-                      Field notes, mapped sites, and 3D reconstructions from our 2026 expedition.
-                    </span>
+                  <a class="field-resource__visual field-resource__visual--logo" href="https://www.hiseas.org/">
+                    <img src="assets/images/field-resources/hiseas-logo.jpg" alt="HiSEAS project" width="840" height="874" loading="lazy">
                   </a>
-                  <p class="field-resource__related"><a class="text-link" href="https://www.hiseas.org/">Part of the HiSEAS project</a></p>
+                  <div class="field-resource__copy">
+                    <h3><a href="https://blakedyer.github.io/cook_islands_2026/">Cook Islands field portal</a></h3>
+                    <p>Field notes, mapped sites, and 3D reconstructions from our 2026 expedition.</p>
+                    <a class="text-link field-resource__related" href="https://www.hiseas.org/">Part of the HiSEAS project</a>
+                  </div>
                 </div>
                 <div class="field-resource">
-                  <a class="atlas-route" href="https://blakedyer.github.io/field_atlas/field-sites/index.html">
-                    <span class="field-resource__visual field-resource__visual--map">
-                      <img src="assets/images/field-resources/bahamas-atlas.webp" alt="Field atlas map of the Bahamian islands and carbonate banks" width="1440" height="1674" loading="lazy">
-                    </span>
-                    <span>
-                      <strong>Field atlas</strong>
-                      Explore field sites and their geological context on a map.
-                    </span>
+                  <a class="field-resource__visual" href="https://blakedyer.github.io/field_atlas/field-sites/index.html">
+                    <img src="assets/images/field-resources/bahamas-sites.svg" alt="Satellite map of the Bahamas with coloured dots marking field sites" width="624" height="560" loading="lazy">
                   </a>
-                  <p class="field-resource__credit">Map: Esri / <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a></p>
+                  <div class="field-resource__copy">
+                    <h3><a href="https://blakedyer.github.io/field_atlas/field-sites/index.html">Field atlas</a></h3>
+                    <p>Explore field sites and their geological context on a map.</p>
+                  </div>
                 </div>
               </div>
             </section>
