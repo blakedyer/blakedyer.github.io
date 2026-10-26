@@ -274,6 +274,10 @@
     const tags = publication.tags
       .map((tag) => `<li class="tag">${escapeHtml(themeLabel(tag))}</li>`)
       .join("");
+    const resources = [
+      ...(publication.doi ? [{ label: "Journal / DOI", url: `https://doi.org/${publication.doi}` }] : []),
+      ...(publication.resources || [])
+    ].map((resource) => `<a href="${escapeHtml(resource.url)}">${escapeHtml(resource.label)}</a>`).join("");
     const detailMarkup = compact
       ? `<p class="paper-journal">${escapeHtml(publication.journal)}</p>`
       : `
@@ -281,6 +285,7 @@
         <p class="paper-summary">${escapeHtml(publication.summary)}</p>
         <p class="paper-authors">${escapeHtml(publication.authors)}</p>
         <p class="paper-journal">${escapeHtml(publication.journal)}</p>
+        <div class="link-row paper-resources">${resources}</div>
       `;
 
     return `
@@ -313,7 +318,7 @@
         (year) => `
           <section class="publication-year-group" data-year="${escapeHtml(year)}">
             <div class="publication-year-marker">
-              <span>${escapeHtml(year)}</span>
+              <h2><span>${escapeHtml(year)}</span></h2>
             </div>
             <div class="publication-year-items">
               ${groups[year].map((publication) => publicationMarkup(publication, compact)).join("")}
@@ -588,6 +593,7 @@
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
         applyFilter(button.dataset.filter);
+        history.pushState(null, "", `#${button.dataset.filter}`);
       });
     });
 
@@ -604,7 +610,10 @@
     window.addEventListener("hashchange", () => {
       const targetId = window.location.hash.replace("#", "");
       if (targetId.startsWith("publication-")) {
+        applyFilter("all");
         scrollToPublicationTarget(targetId);
+      } else {
+        applyFilter(buttons.some((button) => button.dataset.filter === targetId) ? targetId : "all");
       }
     });
   }
