@@ -2323,3 +2323,31 @@ body[data-page="fieldwork"] .hero__content {
     width: calc(100% - 2rem);
   }
 }
+
+/* Related sites live in the footer, leaving the header for this site's pages. */
+.footer-navigation {
+  display: grid;
+  align-content: start;
+  gap: 1.25rem;
+  flex: 0 1 26rem;
+  min-width: 0;
+}
+
+.footer-label {
+  margin: 0 0 0.55rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer-navigation .footer-links {
+  gap: 0.4rem 1rem;
+}
+
+@media (max-width: 640px) {
+  .footer-navigation {
+    flex-basis: auto;
+  }
+}

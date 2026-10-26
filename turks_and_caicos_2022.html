@@ -9,7 +9,7 @@
           <link rel="icon" href="favicon.ico">
           <link rel="icon" type="image/png" sizes="96x96" href="android-chrome-96x96.png">
           <meta name="theme-color" content="#f6f3ed">
-          <link rel="stylesheet" href="theme.css?v=20261026-small">
+          <link rel="stylesheet" href="theme.css?v=20261026-navigation">
           <script defer src="content.js"></script>
           <script defer src="gallery-data.js"></script>
           <script defer src="theme.js?v=20261026-small"></script>
@@ -28,17 +28,11 @@
     >
       Menu
     </button>
-    <nav class="site-nav" id="site-menu" data-nav-menu>
-      <span class="site-nav__label">This site</span>
-      <a href="index.html">Research</a>
+    <nav class="site-nav" id="site-menu" aria-label="Main navigation" data-nav-menu>
+        <a href="index.html">Research</a>
       <a href="publications.html">Publications</a>
       <a href="fieldwork.html" aria-current="page">Field Photos</a>
       <a href="team.html">Team</a>
-      <span class="nav-divider" aria-hidden="true">|</span>
-      <span class="site-nav__label">Other sites</span>
-      <a href="https://blakedyer.github.io/curriculum_atlas/">Curriculum Atlas</a>
-      <a href="https://blakedyer.github.io/seos_curriculum/">Curriculum Work</a>
-      <a href="https://eos-courses.readthedocs.io/en/latest/">Teaching</a>
     </nav>
   </div>
 </header>
@@ -87,12 +81,22 @@
       <p class="footer-brand">Earth History @ UVic</p>
       <p class="footer-copy">Field observations, measured sections, and the landscapes behind the research.</p>
     </div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="publications.html">Publications</a>
-      <a href="team.html">Team</a>
-      <a href="mailto:blakedyer@uvic.ca">Email</a>
-    </div>
+    <div class="footer-navigation">
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="publications.html">Publications</a>
+          <a href="team.html">Team</a>
+          <a href="mailto:blakedyer@uvic.ca">Email</a>
+        </div>
+        <nav class="footer-other-sites" aria-label="Other sites">
+          <p class="footer-label">Other sites</p>
+          <div class="footer-links">
+            <a href="https://blakedyer.github.io/curriculum_atlas/">Curriculum Atlas</a>
+            <a href="https://blakedyer.github.io/seos_curriculum/">Curriculum Work</a>
+            <a href="https://eos-courses.readthedocs.io/en/latest/">Teaching</a>
+          </div>
+        </nav>
+      </div>
   </div>
 </footer>
         </body>
