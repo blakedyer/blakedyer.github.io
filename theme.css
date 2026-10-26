@@ -1317,7 +1317,64 @@ button:focus-visible,
 }
 
 .field-resources .atlas-route {
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  align-items: center;
+  border: 0;
+  padding: 1rem 0;
+}
+
+.field-resource {
+  border-top: 1px solid var(--line);
+}
+
+.field-resource__visual {
+  display: block;
+  width: 100%;
+  height: 6.5rem;
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+.field-resource__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.field-resource__visual--map img {
+  object-position: center 30%;
+}
+
+.field-resource__related,
+.field-resource__credit {
+  margin: -0.35rem 0 1rem 9.5rem;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.field-resource__credit {
+  font-size: 0.72rem;
+}
+
+.field-resource__credit a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 640px) {
+  .field-resources .atlas-route {
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    gap: 0.85rem;
+  }
+
+  .field-resources .atlas-route strong {
+    font-size: 1.3rem;
+  }
+
+  .field-resource__related,
+  .field-resource__credit {
+    margin-left: 7.35rem;
+  }
 }
 
 .footer-copy--invitation {
@@ -2122,4 +2179,105 @@ button:focus-visible,
 /* Keep album text readable over the brighter waves in the Totiko photograph. */
 body[data-gallery="cook-islands"] .hero::before {
   background-color: rgba(12, 18, 17, 0.12);
+}
+
+/* A compact, image-led acknowledgement of the wider research network. */
+.collaborators__band {
+  border-top: 1px solid var(--line);
+  padding-top: 2.5rem;
+}
+
+.collaborator-grid {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 1.5rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.collaborator {
+  display: grid;
+  gap: 0.55rem;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.collaborator img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+
+.collaborator:hover > span:last-child,
+.collaborator:focus-visible > span:last-child {
+  color: var(--accent-dark);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 1100px) {
+  .collaborator-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .collaborator-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem 0.6rem;
+  }
+
+  .collaborator {
+    font-size: 0.83rem;
+  }
+}
+
+/* Put the photograph albums first, with search as an alternative route. */
+body[data-page="fieldwork"] .hero--fieldwork {
+  min-height: clamp(21rem, 45svh, 27rem);
+  padding: 3rem 0 2rem;
+}
+
+body[data-page="fieldwork"] .hero__content {
+  padding-bottom: 0;
+}
+
+.field-albums {
+  padding-top: 2rem;
+}
+
+.field-albums__heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.field-albums__heading h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+.field-albums__search {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 640px) {
+  body[data-page="fieldwork"] .section,
+  body[data-page="fieldwork"] .hero__content {
+    width: calc(100% - 2rem);
+  }
 }

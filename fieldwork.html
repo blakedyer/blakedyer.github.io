@@ -6,16 +6,16 @@
           <title>Field Photos | Earth History @ UVic</title>
           <meta
             name="description"
-            content="Full field-photo archive for Earth History @ UVic, spanning coastal geomorphology, carbonate platforms, and stratigraphic field sites."
+            content="Browse field photo albums from our expeditions, search the wider photo collection, and explore field maps, notes, and 3D reconstructions."
           >
           <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
           <link rel="icon" href="favicon.ico">
           <link rel="icon" type="image/png" sizes="96x96" href="android-chrome-96x96.png">
           <meta name="theme-color" content="#f6f3ed">
-          <link rel="stylesheet" href="theme.css?v=20261026-small">
+          <link rel="stylesheet" href="theme.css?v=20261026-albums-curated-2">
           <script defer src="content.js"></script>
           <script defer src="gallery-data.js"></script>
-          <script defer src="theme.js?v=20261026-small"></script>
+          <script defer src="theme.js?v=20261026-albums-curated"></script>
         </head>
         <body data-page="fieldwork">
           <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -55,46 +55,49 @@
               <h1 class="hero__title">Coastlines and carbonates.</h1>
 
               <p class="hero__lede">
-                Albums connect landscapes to our work.
+                Photographs from our field expeditions.
               </p>
             </div>
           </section>
 
-            <section class="section atlas-overview field-resources" aria-labelledby="field-resources-title">
-              <div class="atlas-overview__copy">
-                <h2 id="field-resources-title">Explore beyond the photographs.</h2>
-                <p>
-                  Blake collaborates with <a class="text-link" href="https://www.hiseas.org/">HiSEAS</a> to study past sea levels, including our 2026 Cook Islands fieldwork.
-                </p>
-              </div>
-              <div class="atlas-route-list">
-                <a class="atlas-route" href="https://blakedyer.github.io/cook_islands_2026/">
-                  <span>
-                    <strong>Cook Islands field portal</strong>
-                    Daily field notes, mapped sites, and 3D reconstructions from the expedition.
-                  </span>
-                </a>
-                <a class="atlas-route" href="https://blakedyer.github.io/field_atlas/field-sites/index.html">
-                  <span>
-                    <strong>Field atlas</strong>
-                    Find field sites and explore their geological context on a map.
-                  </span>
-                </a>
-                <a class="atlas-route" href="https://blakedyer.github.io/field_atlas/photos/index.html">
-                  <span>
-                    <strong>Search field photographs</strong>
-                    Browse the wider photo collection by place or subject.
-                  </span>
-                </a>
-              </div>
-            </section>
-
-            <section class="section">
-              <div class="section-heading section-heading--wide">
-                <p class="section-kicker">Albums</p>
-                <!-- <h2>Browse field sites.</h2> -->
+            <section class="section field-albums" aria-labelledby="field-albums-title">
+              <div class="section-heading field-albums__heading">
+                <h2 id="field-albums-title">Field albums.</h2>
+                <a class="text-link field-albums__search" href="https://blakedyer.github.io/field_atlas/photos/index.html">Search all field photos</a>
               </div>
               <div class="album-grid expedition-grid" id="album-grid"></div>
+            </section>
+
+            <section class="section atlas-overview field-resources" aria-labelledby="field-resources-title">
+              <div class="atlas-overview__copy">
+                <h2 id="field-resources-title">Maps, notes &amp; 3D.</h2>
+              </div>
+              <div class="atlas-route-list">
+                <div class="field-resource">
+                  <a class="atlas-route" href="https://blakedyer.github.io/cook_islands_2026/">
+                    <span class="field-resource__visual">
+                      <img src="assets/images/cook-islands/hs107-coastal-setting.jpg" alt="Waves beneath the limestone cliffs at Totiko, Atiu" width="1600" height="1200" loading="lazy">
+                    </span>
+                    <span>
+                      <strong>Cook Islands field portal</strong>
+                      Field notes, mapped sites, and 3D reconstructions from our 2026 expedition.
+                    </span>
+                  </a>
+                  <p class="field-resource__related"><a class="text-link" href="https://www.hiseas.org/">Part of the HiSEAS project</a></p>
+                </div>
+                <div class="field-resource">
+                  <a class="atlas-route" href="https://blakedyer.github.io/field_atlas/field-sites/index.html">
+                    <span class="field-resource__visual field-resource__visual--map">
+                      <img src="assets/images/field-resources/bahamas-atlas.webp" alt="Field atlas map of the Bahamian islands and carbonate banks" width="1440" height="1674" loading="lazy">
+                    </span>
+                    <span>
+                      <strong>Field atlas</strong>
+                      Explore field sites and their geological context on a map.
+                    </span>
+                  </a>
+                  <p class="field-resource__credit">Map: Esri / <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a></p>
+                </div>
+              </div>
             </section>
           </main>
 

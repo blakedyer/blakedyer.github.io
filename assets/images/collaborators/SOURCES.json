@@ -1,0 +1,192 @@
+{
+  "reviewed": "2026-10-26",
+  "selection": "The 18 collaborators curated by Blake on 2026-10-26, shown with equal treatment in alphabetical order by surname.",
+  "image_reuse": "Public professional portraits, copied without image alteration; display crops controlled in CSS. HiSEAS portraits reused from the existing local HiSEAS site. Copyright remains with original owners.",
+  "people": [
+    {
+      "name": "Anne-Sofie Ahm",
+      "profile_url": "https://anne-sofieahm.github.io/",
+      "file": "anne-sofie-ahm.jpg",
+      "source_url": "https://www.uvic.ca/science/seos/assets/images/profiles/ahm-anne-sofie.jpg",
+      "source_page": "https://www.uvic.ca/science/seos/people/faculty/profiles/ahm-anne-sofie.php",
+      "bytes": 88724,
+      "sha256": "4d1cbdd2d5fa900c79d53d940ffcc24a2af112222d27502dc617e0702fa1f95d",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "Jacqueline Austermann",
+      "profile_url": "https://lamont.columbia.edu/directory/jacqueline-austermann",
+      "file": "jacqueline-austermann.jpg",
+      "source_path": "/limestone/jupyter/blake/hiseas/static/assets/images/current-site/04-997266_5bfee2b36c31401ba6b8f7fc0924a2f0~mv2.jpg",
+      "source_page": "https://www.hiseas.org/",
+      "position": "center 34%",
+      "bytes": 1256666,
+      "sha256": "80402c4977c7d691d804e0f12081fab262b7ec723c6977a4ae72c7b8ca92f677",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "Roger Creel",
+      "profile_url": "https://rogercreel.com/",
+      "file": "roger-creel.jpg",
+      "source_url": "https://rogercreel.com/imgs/221231_headshot_lo.jpeg",
+      "source_page": "https://rogercreel.com/",
+      "bytes": 519415,
+      "sha256": "d2bb42d7995c8e8ecab11afbd875f36aa1cd73dee5deb3213b1009f1ca4e7035",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "William D’Andrea",
+      "profile_url": "https://www.billydandrea.com/",
+      "file": "william-dandrea.png",
+      "source_path": "/limestone/jupyter/blake/hiseas/static/assets/images/current-site/06-997266_fa5c8d0c2b314227b046323cbc31fece~mv2.png",
+      "source_page": "https://www.hiseas.org/",
+      "position": "center 35%",
+      "bytes": 308316,
+      "sha256": "c4e57fd161a23a907890093b6c32f6bc74f23a438378fc6698ff02c02099808a",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "Oana Dumitru",
+      "profile_url": "https://geology.ufl.edu/directory/dr-oana-dumitru/",
+      "file": "oana-dumitru.jpg",
+      "source_path": "/limestone/jupyter/blake/hiseas/static/assets/images/current-site/08-997266_ef195d9e87084f4187d9bdfb06d2910c~mv2.jpg",
+      "source_page": "https://www.hiseas.org/",
+      "position": "center 50%",
+      "bytes": 2233247,
+      "sha256": "7429f32bb781e8064aa9e2ebbec81de1107ea6c20ad933086c3379f63af19664",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "Emily Geyman",
+      "profile_url": "https://stanfordsciencefellows.stanford.edu/people/emily-geyman",
+      "file": "emily-geyman.webp",
+      "source_url": "https://stanfordsciencefellows.stanford.edu/sites/stanfordsciencefellows/files/styles/hs_medium_square_360x360/public/media/image/emily_geyman_0.jpg.webp?h=e83698c6&itok=XDswILOM",
+      "source_page": "https://stanfordsciencefellows.stanford.edu/people/emily-geyman",
+      "bytes": 22204,
+      "sha256": "8b319a876c67b45fa9fd667cc59d9ef307697b851c5896d0b421c437f8d846a0",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "Steven Goldstein",
+      "profile_url": "https://lamont.columbia.edu/directory/steven-l-goldstein",
+      "file": "steven-goldstein.jpg",
+      "source_path": "/limestone/jupyter/blake/hiseas/static/assets/images/current-site/12-997266_3c9d79a247fa46948f939ea6c98cf19f~mv2.jpg",
+      "source_page": "https://www.hiseas.org/",
+      "position": "center 42%",
+      "bytes": 17981,
+      "sha256": "23395112385e9df38131fd2aa1694568118277bb5572a16628312674e78222f4",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "John Higgins",
+      "profile_url": "https://geosciences.princeton.edu/people/john-higgins",
+      "file": "john-higgins.png",
+      "source_url": "https://geosciences.princeton.edu/sites/g/files/toruqf7616/files/styles/3x4_750w_1000h/public/2022-12/2022-john-higgins-photo-laura-pedrick-0048-profile.png?itok=w5SjgCsy",
+      "source_page": "https://geosciences.princeton.edu/people/john-higgins",
+      "bytes": 1148206,
+      "sha256": "add4276ba0388037d3848db58c99c98a1eb303f9361b2e22862793178297306e",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "Jon Husson",
+      "profile_url": "https://www.jonhusson.com/",
+      "file": "jon-husson.jpg",
+      "source_url": "https://www.jonhusson.com/img/about_me/husson2.jpg",
+      "source_page": "https://www.jonhusson.com/",
+      "bytes": 1253284,
+      "sha256": "6890d03c5fe03f515c1771c62c4f7015625db9ca12aea3c193d3e483beaa72f9",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "Claire Jasper",
+      "file": "claire-jasper.jpg",
+      "source_page": "https://campusdirectory.ucsc.edu/cd_detail?guid=G124369132",
+      "profile_url": "https://sites.google.com/view/clairejasper",
+      "bytes": 9277,
+      "sha256": "419ad4f86e2e99f59dff7406f43e59c9cf2a832114642c749dfb1fb2cb07ef30",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "Cin-Ty Lee",
+      "profile_url": "https://www.cintylee.org/about",
+      "file": "cin-ty-lee.jpg",
+      "source_url": "https://images.squarespace-cdn.com/content/v1/54b9bb6fe4b07b4a7d145b55/1421462522752-7Q187SGFR1TTJ3SAW4T2/27ef868543abf9c4e16439c1aeb8f0bd.jpg?format=300w",
+      "source_page": "https://www.cintylee.org/about",
+      "sha256": "0b04a73d498f0fa2200ce1d904785e3193194ec53a1b6cde864dc84989d1412f",
+      "bytes": 63042,
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "Adam Maloof",
+      "profile_url": "https://maloof.princeton.edu/group/faculty",
+      "file": "adam-maloof.webp",
+      "source_url": "https://images.sidearmdev.com/crop?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fprinceton.sidearmsports.com%2Fimages%2F2013%2F10%2F19%2FUGIWRMKECPRPRWL.20131019001512.jpg&width=180&height=270&type=webp",
+      "source_page": "https://goprincetontigers.com/staff-directory/adam-maloof/243",
+      "bytes": 4108,
+      "sha256": "fc069e4380786d8228e8e5db33ba2f5845709394d85b2f36b3c0b3b529c0f78c",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "Emalee Ott",
+      "file": "emalee-ott.jpg",
+      "source_url": "https://geology.ufl.edu/wp-content/uploads/sites/311/Ott-Emalee-e1753205956788-1024x1024.jpg",
+      "source_page": "https://geology.ufl.edu/people/graduate-students/",
+      "profile_url": "https://geology.ufl.edu/people/graduate-students/",
+      "bytes": 99622,
+      "sha256": "d5f25d5a7b68717abdeaf7cb0b54c16192d20138b48ed2294ec7768ba90ab67a",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "William Precht",
+      "file": "william-precht.webp",
+      "source_url": "https://sps.columbia.edu/sites/default/files/styles/card_square_270x270_medium_1x/public/2025-07/william_precht_headshot_su25.jpg.webp?itok=CKKFEQvO",
+      "source_page": "https://sps.columbia.edu/person/william-precht",
+      "profile_url": "https://sps.columbia.edu/person/william-precht",
+      "bytes": 15558,
+      "sha256": "44e01c460e1a8a39358d5ef327ed52754c0a42d7563176a81b0edd9279ab062d",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "Maureen Raymo",
+      "profile_url": "https://moraymo.us/",
+      "file": "maureen-raymo.webp",
+      "source_path": "/limestone/jupyter/blake/hiseas/static/assets/images/current-site/maureen-raymo.webp",
+      "source_page": "https://www.hiseas.org/",
+      "position": "center 36%",
+      "bytes": 13092,
+      "sha256": "82edb001c313a772b800ff033ea68cb19b8f2872d85ab61bc11a1e99e4ebaf3f",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "Alessio Rovere",
+      "profile_url": "https://www.unive.it/persone/alessio.rovere",
+      "file": "alessio-rovere.jpg",
+      "source_path": "/limestone/jupyter/blake/hiseas/static/assets/images/current-site/10-997266_03bcf91fe70f40728ec4a650df4a4cde~mv2.jpg",
+      "source_page": "https://www.hiseas.org/",
+      "position": "center 31%",
+      "bytes": 80026,
+      "sha256": "d7d00186372b02700a3b2983b3ee1db7788a484894ec7d085e2a0c11fc890d39",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "Michael Sandstrom",
+      "profile_url": "https://sandstorm280.wixsite.com/michael-sandstrom",
+      "file": "michael-sandstrom.jpg",
+      "source_url": "https://static.wixstatic.com/media/dc55a1_67438f6aac8b46febc2b8db0d52c3436~mv2.jpg/v1/fill/w_348,h_412,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0754%202.jpg",
+      "source_page": "https://sandstorm280.wixsite.com/michael-sandstrom/about",
+      "bytes": 26806,
+      "sha256": "d5150a46da5c014b0b84d8f20a13865bed8b27e8e9168e5a3b90e91287ad175b",
+      "portrait_status": "sourced"
+    },
+    {
+      "name": "Otillia Steadman",
+      "file": "otillia-steadman.jpg",
+      "source_url": "https://easgrad.ccnysites.cuny.edu/wp-content/uploads/2023/11/Otillia-Steadman.jpeg",
+      "source_page": "https://easgrad.ccnysites.cuny.edu/people/",
+      "profile_url": "https://lamont.columbia.edu/directory/otillia-steadman",
+      "bytes": 53272,
+      "sha256": "ddac9e6c1f6af081d960396b67a29b69cead6672b22bb3622d39d25a587b3682",
+      "portrait_status": "sourced"
+    }
+  ]
+}

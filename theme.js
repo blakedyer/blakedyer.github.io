@@ -420,7 +420,10 @@
 
   function albumMarkup(album) {
     const meta = album.meta || `${album.count} photos`;
-    const contextItems = [album.location, album.dateRange, album.context].filter(Boolean);
+    const contextItems = [
+      album.location === album.title ? "" : album.location,
+      album.context
+    ].filter(Boolean);
     const summaryMarkup =
       album.summary && !contextItems.length ? `<p>${escapeHtml(album.summary)}</p>` : "";
     const albumGallery = galleries[album.slug];

@@ -1,0 +1,11 @@
+[
+  {
+    "file": "bahamas-atlas.webp",
+    "source_repository": "https://github.com/blakedyer/field_atlas",
+    "source_path": "/limestone/jupyter/blake/field_guide/mockups/assets/maps/archive-region-the-bahamas-styletransfer.webp",
+    "source_metadata": "/limestone/jupyter/blake/field_guide/mockups/assets/maps/archive-region-the-bahamas-styletransfer.json",
+    "attribution": "Map background derived from Esri; land polygons \u00a9 OpenStreetMap contributors",
+    "reuse": "Unmodified copy of existing field atlas map; display crop only.",
+    "sha256": "65df8fae39dc58da26857ed6dc81af1e29b43faca5a98692a9ca8c2763d56390"
+  }
+]
