@@ -1316,6 +1316,14 @@ button:focus-visible,
   color: var(--accent-dark);
 }
 
+.field-resources .atlas-route {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.footer-copy--invitation {
+  max-width: 52ch;
+}
+
 .atlas-route__number {
   color: var(--accent);
 }

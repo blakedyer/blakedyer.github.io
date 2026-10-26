@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Check generated site links, assets, landmarks, and no-JavaScript content."""
+"""Check the static site's links, assets, landmarks, and publication PDFs."""
 from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import json
+import re
 
-from build_site import ROOT, PAGES, build
+ROOT = Path(__file__).resolve().parents[1]
 
 
 class Page(HTMLParser):
@@ -31,8 +32,8 @@ class Page(HTMLParser):
 
 
 def main():
-    pages = {name: Page(text) for name, text in build().items()
-             if name.endswith('.html') and name not in {'nav.html', 'footer.html'}}
+    pages = {path.name: Page(path.read_text()) for path in ROOT.glob('*.html')
+             if re.search(r'<script defer src="theme\.js(?:\?[^"]+)?"></script>', path.read_text())}
     errors = []
     filter_fragments = {'all', 'sea-level', 'carbon-cycle', 'stratigraphy', 'methods', 'ice-sheets'}
     for name, page in pages.items():
@@ -55,19 +56,18 @@ def main():
                 valid_filter = target == 'publications.html' and url.fragment in filter_fragments
                 if unquote(url.fragment) not in pages[target].ids and not valid_filter:
                     errors.append(f'{name}: missing anchor {target}#{url.fragment}')
-        if name.removesuffix('.html') in PAGES:
-            for tag in ['h1', 'main', 'title']:
-                if page.tags.count(tag) != 1:
-                    errors.append(f'{name}: expected one {tag}')
-    content = json.loads((ROOT / 'src/content.json').read_text())
+        for tag in ['h1', 'main', 'title']:
+            if page.tags.count(tag) != 1:
+                errors.append(f'{name}: expected one {tag}')
+    content = json.loads((ROOT / 'content.js').read_text().split('=', 1)[1].strip().removesuffix(';'))
     expected = len(content['publications'])
-    actual = sum(key.startswith('publication-') and not key.endswith('-title')
-                 for key in pages['publications.html'].ids if key not in {'publication-grid', 'publication-overview'})
-    if actual != expected:
-        errors.append(f'Publications fallback: expected {expected} papers, found {actual}')
+    for publication in content['publications']:
+        link = publication['link']
+        if not urlsplit(link).scheme and not (ROOT / link).is_file():
+            errors.append(f'Publications: missing PDF {link}')
     if errors:
         raise SystemExit('\n'.join(errors))
-    print(f'Checked {len(pages)} pages: local links, anchors, assets, image descriptions, core landmarks, and {expected} static publications.')
+    print(f'Checked {len(pages)} pages: local links, anchors, assets, image descriptions, core landmarks, and {expected} publication PDFs.')
 
 
 if __name__ == '__main__':

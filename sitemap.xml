@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://blakedyer.github.io/</loc></url>
-  <url><loc>https://blakedyer.github.io/Indonesia.html</loc></url>
-  <url><loc>https://blakedyer.github.io/bahamas.html</loc></url>
-  <url><loc>https://blakedyer.github.io/barbados.html</loc></url>
-  <url><loc>https://blakedyer.github.io/canadian_rockies_2021.html</loc></url>
-  <url><loc>https://blakedyer.github.io/cook-islands.html</loc></url>
-  <url><loc>https://blakedyer.github.io/cv.pdf</loc></url>
-  <url><loc>https://blakedyer.github.io/fieldwork.html</loc></url>
-  <url><loc>https://blakedyer.github.io/hawaii.html</loc></url>
-  <url><loc>https://blakedyer.github.io/join.html</loc></url>
-  <url><loc>https://blakedyer.github.io/partnerships.html</loc></url>
-  <url><loc>https://blakedyer.github.io/publications.html</loc></url>
-  <url><loc>https://blakedyer.github.io/research.html</loc></url>
-  <url><loc>https://blakedyer.github.io/south_australia.html</loc></url>
-  <url><loc>https://blakedyer.github.io/te-rotonui.html</loc></url>
-  <url><loc>https://blakedyer.github.io/team.html</loc></url>
-  <url><loc>https://blakedyer.github.io/turks_and_caicos_2022.html</loc></url>
-  <url><loc>https://blakedyer.github.io/western_us_cambrian.html</loc></url>
-  <url><loc>https://blakedyer.github.io/western_us_devonian.html</loc></url>
-  <url><loc>https://blakedyer.github.io/western_us_pennsylvanian.html</loc></url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://blakedyer.github.io/</loc>
+  <lastmod>2026-04-29T00:00:00+00:00</lastmod>
+</url>
+<url>
+  <loc>https://blakedyer.github.io/index.html</loc>
+  <lastmod>2026-04-29T00:00:00+00:00</lastmod>
+</url>
+<url>
+  <loc>https://blakedyer.github.io/publications.html</loc>
+  <lastmod>2026-04-29T00:00:00+00:00</lastmod>
+</url>
+<url>
+  <loc>https://blakedyer.github.io/fieldwork.html</loc>
+  <lastmod>2026-04-29T00:00:00+00:00</lastmod>
+</url>
+<url>
+  <loc>https://blakedyer.github.io/team.html</loc>
+  <lastmod>2026-04-29T00:00:00+00:00</lastmod>
+</url>
+<url>
+  <loc>https://blakedyer.github.io/cv.pdf</loc>
+  <lastmod>2026-04-29T00:00:00+00:00</lastmod>
+</url>
+<url>
+  <loc>https://blakedyer.github.io/cook-islands.html</loc>
+  <lastmod>2026-10-17T00:00:00+00:00</lastmod>
+</url>
 </urlset>
